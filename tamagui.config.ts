@@ -9,38 +9,55 @@ import { createTamagui, createFont, createTokens } from 'tamagui'
 const KarlaFont = createFont({
   family: 'Karla',
   size: {
+    '2xs':10,
     xs: 12,
     sm: 14,
+    true: 14,
     md: 16,
     lg: 18,
     xl: 20,
-  },
-  lineHeight: {
-    1: 17,
-    2: 22,
-    3: 25,
-
-  },
-  weight: {
-    4: '300',
-    6: '600',
+    '2xl': 24,
+    "3xl": 30,
+    "4xl": 36,
   },
   letterSpacing: {
     4: 0,
     8: -1,
+    xs: -0.05,
+    sm: -0.025,
+    md: 0,
+    lg: 0.025,
+    xl: 0.05,
+    '2xl': 0.1,
   },
+
   face: {
+    600: { normal: 'KarlaBold',  },
     700: { normal: 'KarlaBold',  },
   },
+  
 })
-
 
 
 const size = {
   0: 0,
   1: 4,
   true: 4,
-  2: 8
+  2: 8,
+  3:12,
+  4:16,
+  5:20,
+  6:24,
+  7:28,
+  8:32,
+  9:36,
+  10: 40,
+  12:48,
+  14:56,
+  16:64,
+  20: 80,
+  24: 96,
+  33: 148
 };
 
 const space = {

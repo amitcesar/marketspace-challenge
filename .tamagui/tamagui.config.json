@@ -19168,39 +19168,30 @@
       "heading": {
         "family": "Karla",
         "size": {
+          "2xs": 10,
           "xs": 12,
           "sm": 14,
+          "true": 14,
           "md": 16,
           "lg": 18,
-          "xl": 20
-        },
-        "lineHeight": {
-          "1": 17,
-          "2": 22,
-          "3": 25,
-          "xs": 17,
-          "sm": 17,
-          "md": 17,
-          "lg": 17,
-          "xl": 17
-        },
-        "weight": {
-          "4": "300",
-          "6": "600",
-          "xs": "300",
-          "sm": "300",
-          "md": "300",
-          "lg": "300",
-          "xl": "300"
+          "xl": 20,
+          "2xl": 24,
+          "3xl": 30,
+          "4xl": 36
         },
         "letterSpacing": {
           "4": 0,
           "8": -1,
-          "xs": 0,
-          "sm": 0,
+          "2xs": 0,
+          "xs": -0.05,
+          "sm": -0.025,
+          "true": -0.025,
           "md": 0,
-          "lg": 0,
-          "xl": 0
+          "lg": 0.025,
+          "xl": 0.05,
+          "2xl": 0.1,
+          "3xl": 0.1,
+          "4xl": 0.1
         },
         "face": {
           "100": {
@@ -19219,7 +19210,7 @@
             "normal": "Karla"
           },
           "600": {
-            "normal": "Karla"
+            "normal": "KarlaBold"
           },
           "700": {
             "normal": "KarlaBold"
@@ -19235,39 +19226,30 @@
       "body": {
         "family": "Karla",
         "size": {
+          "2xs": 10,
           "xs": 12,
           "sm": 14,
+          "true": 14,
           "md": 16,
           "lg": 18,
-          "xl": 20
-        },
-        "lineHeight": {
-          "1": 17,
-          "2": 22,
-          "3": 25,
-          "xs": 17,
-          "sm": 17,
-          "md": 17,
-          "lg": 17,
-          "xl": 17
-        },
-        "weight": {
-          "4": "300",
-          "6": "600",
-          "xs": "300",
-          "sm": "300",
-          "md": "300",
-          "lg": "300",
-          "xl": "300"
+          "xl": 20,
+          "2xl": 24,
+          "3xl": 30,
+          "4xl": 36
         },
         "letterSpacing": {
           "4": 0,
           "8": -1,
-          "xs": 0,
-          "sm": 0,
+          "2xs": 0,
+          "xs": -0.05,
+          "sm": -0.025,
+          "true": -0.025,
           "md": 0,
-          "lg": 0,
-          "xl": 0
+          "lg": 0.025,
+          "xl": 0.05,
+          "2xl": 0.1,
+          "3xl": 0.1,
+          "4xl": 0.1
         },
         "face": {
           "100": {
@@ -19286,7 +19268,7 @@
             "normal": "Karla"
           },
           "600": {
-            "normal": "Karla"
+            "normal": "KarlaBold"
           },
           "700": {
             "normal": "KarlaBold"
@@ -44245,10 +44227,108 @@
           "val": 8,
           "variable": ""
         },
+        "3": {
+          "isVar": true,
+          "key": "$3",
+          "name": "size-4",
+          "val": 12,
+          "variable": ""
+        },
+        "4": {
+          "isVar": true,
+          "key": "$4",
+          "name": "size-5",
+          "val": 16,
+          "variable": ""
+        },
+        "5": {
+          "isVar": true,
+          "key": "$5",
+          "name": "size-6",
+          "val": 20,
+          "variable": ""
+        },
+        "6": {
+          "isVar": true,
+          "key": "$6",
+          "name": "size-7",
+          "val": 24,
+          "variable": ""
+        },
+        "7": {
+          "isVar": true,
+          "key": "$7",
+          "name": "size-8",
+          "val": 28,
+          "variable": ""
+        },
+        "8": {
+          "isVar": true,
+          "key": "$8",
+          "name": "size-9",
+          "val": 32,
+          "variable": ""
+        },
+        "9": {
+          "isVar": true,
+          "key": "$9",
+          "name": "size-10",
+          "val": 36,
+          "variable": ""
+        },
+        "10": {
+          "isVar": true,
+          "key": "$10",
+          "name": "size-11",
+          "val": 40,
+          "variable": ""
+        },
+        "12": {
+          "isVar": true,
+          "key": "$12",
+          "name": "size-12",
+          "val": 48,
+          "variable": ""
+        },
+        "14": {
+          "isVar": true,
+          "key": "$14",
+          "name": "size-13",
+          "val": 56,
+          "variable": ""
+        },
+        "16": {
+          "isVar": true,
+          "key": "$16",
+          "name": "size-14",
+          "val": 64,
+          "variable": ""
+        },
+        "20": {
+          "isVar": true,
+          "key": "$20",
+          "name": "size-15",
+          "val": 80,
+          "variable": ""
+        },
+        "24": {
+          "isVar": true,
+          "key": "$24",
+          "name": "size-16",
+          "val": 96,
+          "variable": ""
+        },
+        "33": {
+          "isVar": true,
+          "key": "$33",
+          "name": "size-17",
+          "val": 148,
+          "variable": ""
+        },
         "true": {
           "isVar": true,
           "key": "$true",
-          "name": "size-4",
+          "name": "size-18",
           "val": 4,
           "variable": ""
         }
@@ -44275,31 +44355,129 @@
           "val": 8,
           "variable": ""
         },
+        "3": {
+          "isVar": true,
+          "key": "$3",
+          "name": "space-4",
+          "val": 12,
+          "variable": ""
+        },
+        "4": {
+          "isVar": true,
+          "key": "$4",
+          "name": "space-5",
+          "val": 16,
+          "variable": ""
+        },
+        "5": {
+          "isVar": true,
+          "key": "$5",
+          "name": "space-6",
+          "val": 20,
+          "variable": ""
+        },
+        "6": {
+          "isVar": true,
+          "key": "$6",
+          "name": "space-7",
+          "val": 24,
+          "variable": ""
+        },
+        "7": {
+          "isVar": true,
+          "key": "$7",
+          "name": "space-8",
+          "val": 28,
+          "variable": ""
+        },
+        "8": {
+          "isVar": true,
+          "key": "$8",
+          "name": "space-9",
+          "val": 32,
+          "variable": ""
+        },
+        "9": {
+          "isVar": true,
+          "key": "$9",
+          "name": "space-10",
+          "val": 36,
+          "variable": ""
+        },
+        "10": {
+          "isVar": true,
+          "key": "$10",
+          "name": "space-11",
+          "val": 40,
+          "variable": ""
+        },
+        "12": {
+          "isVar": true,
+          "key": "$12",
+          "name": "space-12",
+          "val": 48,
+          "variable": ""
+        },
+        "14": {
+          "isVar": true,
+          "key": "$14",
+          "name": "space-13",
+          "val": 56,
+          "variable": ""
+        },
+        "16": {
+          "isVar": true,
+          "key": "$16",
+          "name": "space-14",
+          "val": 64,
+          "variable": ""
+        },
+        "20": {
+          "isVar": true,
+          "key": "$20",
+          "name": "space-15",
+          "val": 80,
+          "variable": ""
+        },
+        "24": {
+          "isVar": true,
+          "key": "$24",
+          "name": "space-16",
+          "val": 96,
+          "variable": ""
+        },
+        "33": {
+          "isVar": true,
+          "key": "$33",
+          "name": "space-17",
+          "val": 148,
+          "variable": ""
+        },
         "true": {
           "isVar": true,
           "key": "$true",
-          "name": "space-4",
+          "name": "space-18",
           "val": 4,
           "variable": ""
         },
         "-0": {
           "isVar": true,
           "key": "$-0",
-          "name": "space-5",
+          "name": "space-19",
           "val": 0,
           "variable": ""
         },
         "-1": {
           "isVar": true,
           "key": "$-1",
-          "name": "space-6",
+          "name": "space-20",
           "val": -5,
           "variable": ""
         },
         "-2": {
           "isVar": true,
           "key": "$-2",
-          "name": "space-7",
+          "name": "space-21",
           "val": -10,
           "variable": ""
         }
@@ -44547,10 +44725,108 @@
         "val": 8,
         "variable": ""
       },
+      "$size.3": {
+        "isVar": true,
+        "key": "$3",
+        "name": "size-4",
+        "val": 12,
+        "variable": ""
+      },
+      "$size.4": {
+        "isVar": true,
+        "key": "$4",
+        "name": "size-5",
+        "val": 16,
+        "variable": ""
+      },
+      "$size.5": {
+        "isVar": true,
+        "key": "$5",
+        "name": "size-6",
+        "val": 20,
+        "variable": ""
+      },
+      "$size.6": {
+        "isVar": true,
+        "key": "$6",
+        "name": "size-7",
+        "val": 24,
+        "variable": ""
+      },
+      "$size.7": {
+        "isVar": true,
+        "key": "$7",
+        "name": "size-8",
+        "val": 28,
+        "variable": ""
+      },
+      "$size.8": {
+        "isVar": true,
+        "key": "$8",
+        "name": "size-9",
+        "val": 32,
+        "variable": ""
+      },
+      "$size.9": {
+        "isVar": true,
+        "key": "$9",
+        "name": "size-10",
+        "val": 36,
+        "variable": ""
+      },
+      "$size.10": {
+        "isVar": true,
+        "key": "$10",
+        "name": "size-11",
+        "val": 40,
+        "variable": ""
+      },
+      "$size.12": {
+        "isVar": true,
+        "key": "$12",
+        "name": "size-12",
+        "val": 48,
+        "variable": ""
+      },
+      "$size.14": {
+        "isVar": true,
+        "key": "$14",
+        "name": "size-13",
+        "val": 56,
+        "variable": ""
+      },
+      "$size.16": {
+        "isVar": true,
+        "key": "$16",
+        "name": "size-14",
+        "val": 64,
+        "variable": ""
+      },
+      "$size.20": {
+        "isVar": true,
+        "key": "$20",
+        "name": "size-15",
+        "val": 80,
+        "variable": ""
+      },
+      "$size.24": {
+        "isVar": true,
+        "key": "$24",
+        "name": "size-16",
+        "val": 96,
+        "variable": ""
+      },
+      "$size.33": {
+        "isVar": true,
+        "key": "$33",
+        "name": "size-17",
+        "val": 148,
+        "variable": ""
+      },
       "$size.true": {
         "isVar": true,
         "key": "$true",
-        "name": "size-4",
+        "name": "size-18",
         "val": 4,
         "variable": ""
       },
@@ -44575,31 +44851,129 @@
         "val": 8,
         "variable": ""
       },
+      "$space.3": {
+        "isVar": true,
+        "key": "$3",
+        "name": "space-4",
+        "val": 12,
+        "variable": ""
+      },
+      "$space.4": {
+        "isVar": true,
+        "key": "$4",
+        "name": "space-5",
+        "val": 16,
+        "variable": ""
+      },
+      "$space.5": {
+        "isVar": true,
+        "key": "$5",
+        "name": "space-6",
+        "val": 20,
+        "variable": ""
+      },
+      "$space.6": {
+        "isVar": true,
+        "key": "$6",
+        "name": "space-7",
+        "val": 24,
+        "variable": ""
+      },
+      "$space.7": {
+        "isVar": true,
+        "key": "$7",
+        "name": "space-8",
+        "val": 28,
+        "variable": ""
+      },
+      "$space.8": {
+        "isVar": true,
+        "key": "$8",
+        "name": "space-9",
+        "val": 32,
+        "variable": ""
+      },
+      "$space.9": {
+        "isVar": true,
+        "key": "$9",
+        "name": "space-10",
+        "val": 36,
+        "variable": ""
+      },
+      "$space.10": {
+        "isVar": true,
+        "key": "$10",
+        "name": "space-11",
+        "val": 40,
+        "variable": ""
+      },
+      "$space.12": {
+        "isVar": true,
+        "key": "$12",
+        "name": "space-12",
+        "val": 48,
+        "variable": ""
+      },
+      "$space.14": {
+        "isVar": true,
+        "key": "$14",
+        "name": "space-13",
+        "val": 56,
+        "variable": ""
+      },
+      "$space.16": {
+        "isVar": true,
+        "key": "$16",
+        "name": "space-14",
+        "val": 64,
+        "variable": ""
+      },
+      "$space.20": {
+        "isVar": true,
+        "key": "$20",
+        "name": "space-15",
+        "val": 80,
+        "variable": ""
+      },
+      "$space.24": {
+        "isVar": true,
+        "key": "$24",
+        "name": "space-16",
+        "val": 96,
+        "variable": ""
+      },
+      "$space.33": {
+        "isVar": true,
+        "key": "$33",
+        "name": "space-17",
+        "val": 148,
+        "variable": ""
+      },
       "$space.true": {
         "isVar": true,
         "key": "$true",
-        "name": "space-4",
+        "name": "space-18",
         "val": 4,
         "variable": ""
       },
       "$space.-0": {
         "isVar": true,
         "key": "$-0",
-        "name": "space-5",
+        "name": "space-19",
         "val": 0,
         "variable": ""
       },
       "$space.-1": {
         "isVar": true,
         "key": "$-1",
-        "name": "space-6",
+        "name": "space-20",
         "val": -5,
         "variable": ""
       },
       "$space.-2": {
         "isVar": true,
         "key": "$-2",
-        "name": "space-7",
+        "name": "space-21",
         "val": -10,
         "variable": ""
       },

@@ -10,10 +10,10 @@ export function HomeScreen() {
       f={1}
       bg="$gray_600"
       ai="center"
-      justifyContent="space-around"
+      justifyContent="space-between"
       borderRadius={6}
     >
-      <YStack ai="center" space="$4" mt="$20">
+      <YStack ai="center" space="$4" mt="$24">
         <LogoSvg />
         <Stack>
           <MarketspaceText />
@@ -43,7 +43,7 @@ export function HomeScreen() {
         alignSelf="flex-end"
         w="100%"
         gap="$3"
-        pt="$12"
+        pt="$10"
       >
         <Text
           fontSize={"$sm"}

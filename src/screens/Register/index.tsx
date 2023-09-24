@@ -11,6 +11,8 @@ import { UserAvatar } from "@components/UserAvatar";
 import { PencilSimpleLine } from "phosphor-react-native";
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
+const AVATAR_SIZE = 88;
+
 export function Register() {
   return (
     <YStack f={1} bg="$gray_600" ai="center">
@@ -31,7 +33,7 @@ export function Register() {
       </YStack>
 
       <XStack jc="flex-end" ai="flex-end" mt="$5" mb="$4">
-        <UserAvatar />
+        <UserAvatar size={AVATAR_SIZE} />
         <ButtonTamagui
           bg="$blue_light"
           w={40}

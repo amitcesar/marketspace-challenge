@@ -44,7 +44,7 @@ export default function App() {
   return (
     <StyleProvider>
       <StatusBar style="dark" translucent />
-      <Register />
+      <HomeScreen />
     </StyleProvider>
   );
 }

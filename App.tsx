@@ -7,7 +7,7 @@ import * as SplashScreen from "expo-splash-screen";
 import config from "./tamagui.config";
 import { useFonts } from "expo-font";
 import { HomeScreen } from "@screens/Home";
-import { Register } from "@screens/Register";
+import { Routes } from "@routes/index";
 
 type StyleProviderProps = {
   children: ReactNode;
@@ -44,7 +44,7 @@ export default function App() {
   return (
     <StyleProvider>
       <StatusBar style="dark" translucent />
-      <HomeScreen />
+      <Routes />
     </StyleProvider>
   );
 }

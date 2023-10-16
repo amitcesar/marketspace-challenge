@@ -13,7 +13,7 @@ import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 const AVATAR_SIZE = 88;
 
-export function Register() {
+export function RegisterScreen() {
   return (
     <YStack f={1} bg="$gray_600" ai="center">
       <YStack ai="center" jc="center" space="$2" mt={"$12"}>

@@ -5,10 +5,10 @@ type Props = AvatarImageProps & {
   size: number;
 };
 
-export function UserAvatar({ size, ...rest }: Props) {
+export function ChangeUserAvatar({ size, ...rest }: Props) {
   return (
-    <Avatar circular size={size}>
-      <Avatar.Image src={defaultAvatarImage} {...rest} />
+    <Avatar circular size={size} {...rest}>
+      <Avatar.Image src={defaultAvatarImage} />
       <Avatar.Fallback bc="$gray_500" />
     </Avatar>
   );

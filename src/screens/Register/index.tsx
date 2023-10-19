@@ -7,10 +7,11 @@ import {
   ScrollView,
 } from "tamagui";
 import LogoSvg from "@assets/marketspaceLogo.svg";
-import { UserAvatar } from "@components/UserAvatar";
+
 import { PencilSimpleLine } from "phosphor-react-native";
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
+import { ChangeUserAvatar } from "@components/ChangeUserAvatar";
 const AVATAR_SIZE = 88;
 
 export function RegisterScreen() {
@@ -33,7 +34,7 @@ export function RegisterScreen() {
       </YStack>
 
       <XStack jc="flex-end" ai="flex-end" mt="$5" mb="$4">
-        <UserAvatar size={AVATAR_SIZE} />
+        <ChangeUserAvatar size={AVATAR_SIZE} />
         <ButtonTamagui
           bg="$blue_light"
           w={40}

@@ -3,8 +3,15 @@ import LogoSvg from "@assets/marketspaceLogo.svg";
 import MarketspaceText from "@assets/marketspace.svg";
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
+import { useNavigation } from "@react-navigation/native";
+import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
 export function LoginScreen() {
+  const navigation = useNavigation<AuthNavigatorRoutesProps>();
+
+  const handleUserToRegistrationScreen = () => {
+    navigation.navigate("register");
+  };
   return (
     <YStack
       f={1}
@@ -53,7 +60,12 @@ export function LoginScreen() {
         >
           ainda não tem acesso?
         </Text>
-        <Button title="Criar uma conta" color="$gray_200" bg={"$gray_500"} />
+        <Button
+          title="Criar uma conta"
+          color="$gray_200"
+          bg={"$gray_500"}
+          onPress={handleUserToRegistrationScreen}
+        />
       </Stack>
     </YStack>
   );

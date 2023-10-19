@@ -10,6 +10,7 @@ type AuthRoutes = {
   register: undefined;
 };
 
+export type AuthNavigatorRoutesProps = NativeStackNavigationProp<AuthRoutes>;
 const { Navigator, Screen } = createNativeStackNavigator<AuthRoutes>();
 export function AuthRoutes() {
   return (

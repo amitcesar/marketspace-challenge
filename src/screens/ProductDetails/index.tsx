@@ -21,34 +21,8 @@ import { ImageCarousel } from "@components/ImageCarousel";
 import { Button } from "@components/Button";
 import { HeaderWithBackButton } from "@components/HeaderWithBackButton";
 import { Tag } from "@components/Tag";
+import { UserAvatarWithName } from "@components/UserAvatarWithName";
 
-/*
-  <Text
-            fontFamily={"$body"}
-            fontSize="$2xs"
-            p="$1"
-            borderRadius={12}
-            backgroundColor="$gray_200"
-            fontWeight={"600"}
-            alignSelf="flex-start"
-            mt="$6"
-          >
-            USADO
-          </Text>
-*/
-
-/*
-
-    <Avatar
-              circular
-              size="$6"
-              borderWidth={2}
-              borderColor="$blue_light"
-            >
-              <Avatar.Image src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-              <Avatar.Fallback bc="$gray_600" />
-            </Avatar>
-*/
 export function ProductDetailsScreen() {
   return (
     <YStack f={1} bg="$gray_600">
@@ -57,26 +31,7 @@ export function ProductDetailsScreen() {
       <ImageCarousel />
       <ScrollView showsVerticalScrollIndicator={false}>
         <YStack mx="$6" mt="$4" f={1}>
-          <XStack>
-            <Avatar
-              circular
-              size="$6"
-              borderWidth={2}
-              borderColor="$blue_light"
-            >
-              <Avatar.Image src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-              <Avatar.Fallback bc="$gray_600" />
-            </Avatar>
-
-            <Text
-              fontFamily={"$body"}
-              fontSize={"$md"}
-              color="$gray_100"
-              pl="$2"
-            >
-              Erick Ray
-            </Text>
-          </XStack>
+          <UserAvatarWithName name="Erick Rayy" />
 
           <Stack alignSelf="flex-start" mt="$6">
             <Tag label="novo" />

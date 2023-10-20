@@ -1,4 +1,5 @@
 import { Tag } from "@components/Tag";
+import { UserAvatar } from "@components/UserAvatar";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { XStack, YStack, Avatar, Text, Image } from "tamagui";
 const LINKIMAGE =
@@ -17,12 +18,9 @@ export function ProductCard({ ...rest }: TouchableOpacityProps) {
           maw={153.5}
           mah={143}
         >
-          <Avatar circular size={"$6"} borderWidth={1} borderColor="white">
-            <Avatar.Image src="http://placekitten.com/200/300" />
-            <Avatar.Fallback bc="$gray_500" />
-          </Avatar>
+          <UserAvatar borderColor={"white"} borderWidth={1} />
 
-          <Tag label="novo" />
+          <Tag label="usado" />
         </XStack>
 
         <YStack zIndex={-1} space="$1">
@@ -30,7 +28,7 @@ export function ProductCard({ ...rest }: TouchableOpacityProps) {
             source={{
               width: 153,
               height: 100,
-              uri: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1999&q=80",
+              uri: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
             }}
             borderRadius={6}
           />

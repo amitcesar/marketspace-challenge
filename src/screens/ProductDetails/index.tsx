@@ -1,15 +1,5 @@
+import { YStack, XStack, Text, Heading, ScrollView, Stack } from "tamagui";
 import {
-  YStack,
-  XStack,
-  Button as ButtonTamagui,
-  Avatar,
-  Text,
-  Heading,
-  ScrollView,
-  Stack,
-} from "tamagui";
-import {
-  ArrowLeft,
   Barcode,
   QrCode,
   Money,
@@ -21,7 +11,7 @@ import { ImageCarousel } from "@components/ImageCarousel";
 import { Button } from "@components/Button";
 import { HeaderWithBackButton } from "@components/HeaderWithBackButton";
 import { Tag } from "@components/Tag";
-import { UserAvatarWithName } from "@components/UserAvatarWithName";
+import { UserAvatar } from "@components/UserAvatar";
 
 export function ProductDetailsScreen() {
   return (
@@ -31,9 +21,9 @@ export function ProductDetailsScreen() {
       <ImageCarousel />
       <ScrollView showsVerticalScrollIndicator={false}>
         <YStack mx="$6" mt="$4" f={1}>
-          <UserAvatarWithName name="Erick Rayy" />
+          <UserAvatar name="Erick Ray" />
 
-          <Stack alignSelf="flex-start" mt="$6">
+          <Stack alignSelf="flex-start" mt="$4">
             <Tag label="novo" />
           </Stack>
 
@@ -64,7 +54,7 @@ export function ProductDetailsScreen() {
               fontSize={"$sm"}
               fontFamily={"$body"}
               color="$gray_200"
-              mt="$3"
+              pt="$2"
             >
               Cras congue cursus in tortor sagittis placerat nunc, tellus arcu.
               Vitae ante leo eget maecenas urna mattis cursus. Mauris metus amet
@@ -91,7 +81,7 @@ export function ProductDetailsScreen() {
               </Text>
             </XStack>
 
-            <YStack mt="$4">
+            <YStack mt="$3">
               <Heading
                 fontSize={"$sm"}
                 fontFamily={"$body"}
@@ -101,7 +91,7 @@ export function ProductDetailsScreen() {
                 Meios de pagamento
               </Heading>
 
-              <XStack gap="$2" pt="$2">
+              <XStack pt="$2" gap="$2">
                 <Barcode size={18} color="#1A181B" />
                 <Text color="$gray_200" fontSize={"$sm"} fontFamily={"$body"}>
                   Boleto
@@ -135,27 +125,21 @@ export function ProductDetailsScreen() {
           </YStack>
         </YStack>
 
-        <Stack>
+        <Stack mt="$2">
           <XStack
+            bg="$gray_700"
             ai="center"
             jc="space-between"
-            pb="$8"
-            mt="$6"
-            bg="$gray_700"
             p="$6"
             borderRadius={6}
           >
             <XStack jc="space-between">
               <XStack ai="center" space="$1">
-                <Heading
-                  fontSize={"$md"}
-                  color="$blue_light"
-                  fontWeight={"700"}
-                >
+                <Heading fontSize={"$md"} color="$blue_dark" fontWeight={"700"}>
                   R$
                 </Heading>
                 <Heading
-                  color="$blue_light"
+                  color="$blue_dark"
                   fontSize={"$3xl"}
                   fontWeight={"700"}
                 >
@@ -172,6 +156,7 @@ export function ProductDetailsScreen() {
               icon={<WhatsappLogo size={16} />}
               maw={180}
               p="$2"
+              fontSize={"$sm"}
             />
           </XStack>
         </Stack>

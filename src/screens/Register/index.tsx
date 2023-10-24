@@ -1,11 +1,4 @@
-import {
-  YStack,
-  Text,
-  Stack,
-  Button as ButtonTamagui,
-  XStack,
-  ScrollView,
-} from "tamagui";
+import { YStack, Text, Button as ButtonTamagui, XStack } from "tamagui";
 import LogoSvg from "@assets/marketspaceLogo.svg";
 
 import { PencilSimpleLine } from "phosphor-react-native";

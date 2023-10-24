@@ -1,14 +1,14 @@
 import { ReactNode, useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
-
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Stack, TamaguiProvider, H1 } from "tamagui";
 import * as SplashScreen from "expo-splash-screen";
 
-import config from "./tamagui.config";
 import { useFonts } from "expo-font";
 import { HomeScreen } from "@screens/Home";
 import { Routes } from "@routes/index";
 
+import config from "./tamagui.config";
 type StyleProviderProps = {
   children: ReactNode;
 };
@@ -34,9 +34,11 @@ export default function App() {
   const StyleProvider = ({ children }: StyleProviderProps) => {
     return (
       <TamaguiProvider config={config}>
-        <Stack onLayout={onLayoutRootView} f={1}>
-          {children}
-        </Stack>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <Stack onLayout={onLayoutRootView} f={1}>
+            {children}
+          </Stack>
+        </GestureHandlerRootView>
       </TamaguiProvider>
     );
   };

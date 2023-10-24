@@ -1,11 +1,5 @@
 import { Input } from "@components/Input";
-import {
-  XStack,
-  Button as ButtonTamagui,
-  Separator,
-  Paragraph,
-  Text,
-} from "tamagui";
+import { XStack, Button as ButtonTamagui, Text } from "tamagui";
 import { MagnifyingGlass, Sliders } from "phosphor-react-native";
 
 export function SearchInput() {

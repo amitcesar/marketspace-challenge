@@ -1,4 +1,4 @@
-import { Input as TInput, InputProps, Stack } from "tamagui";
+import { Input as TInput, InputProps } from "tamagui";
 
 export function Input({ ...rest }: InputProps) {
   return (

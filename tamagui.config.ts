@@ -19,6 +19,7 @@ const KarlaFont = createFont({
     '2xl': 24,
     "3xl": 30,
     "4xl": 36,
+    "6xl" : 48,
   },
   letterSpacing: {
     4: 0,

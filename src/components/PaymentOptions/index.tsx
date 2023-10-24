@@ -1,11 +1,4 @@
-import {
-  Checkbox,
-  XStack,
-  YStack,
-  Text,
-  SizeTokens,
-  CheckboxProps,
-} from "tamagui";
+import { Checkbox, XStack, YStack, Text } from "tamagui";
 import { X, Check } from "phosphor-react-native";
 
 const options = [
@@ -15,23 +8,22 @@ const options = [
   "Cartão de Crédito",
   "Depósito Bancário",
 ];
-// {...checkboxProps} :CheckboxProps
+
 export const PaymentOptions = () => {
   return (
     <YStack mt="$3" gap="$2">
-      {options.map((paymentOptions) => (
+      {options.map((paymentOptions, index) => (
         <XStack ai={"center"}>
           <Checkbox
-            key={paymentOptions}
+            key={index}
             backgroundColor={"$blue_light"}
             borderColor={"$white"}
-            // size={"$12"}
-            size={"$12"}
             borderRadius={4}
-            // {...checkboxProps}
+            w={22}
+            h={22}
           >
             <Checkbox.Indicator>
-              <Check color="#fff" size={16} />
+              <Check color="#fff" />
             </Checkbox.Indicator>
           </Checkbox>
 

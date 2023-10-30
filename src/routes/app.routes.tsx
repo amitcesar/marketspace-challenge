@@ -3,15 +3,13 @@ import {
   BottomTabNavigationProp,
 } from "@react-navigation/bottom-tabs";
 
-import HomeSvg from "@assets/home.svg";
+import HomeSvg from "@assets/IconHome.svg";
 import ExitSvg from "@assets/exit.svg";
 import ProductSvg from "@assets/product.svg";
 import { HomeScreen } from "@screens/Home";
 import { ProductDetailsScreen } from "@screens/ProductDetails";
 import { MyAdvertisements } from "@screens/MyAdvertisements";
 
-import { useTheme } from "tamagui";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 import { LoginScreen } from "@screens/Login";
 
 type AppRoutes = {
@@ -20,11 +18,13 @@ type AppRoutes = {
   myAdvertisements: undefined;
   logout: undefined;
 };
+
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
 const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
-export function AppRoutes() {
-  const ICON_SIZE = 24;
 
+const ICON_SIZE = 24;
+
+export function AppRoutes() {
   return (
     <Navigator
       screenOptions={{

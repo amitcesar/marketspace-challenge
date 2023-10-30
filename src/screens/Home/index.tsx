@@ -1,3 +1,4 @@
+import { useMemo, useRef } from "react";
 import { Button } from "@components/Button";
 import {
   YStack,
@@ -7,25 +8,38 @@ import {
   Button as ButtonTamagui,
   Stack,
   ScrollView,
+  Switch,
 } from "tamagui";
 
-import { Plus, Tag, ArrowRight } from "phosphor-react-native";
-import { SearchInput } from "@components/SeachInput";
+import {
+  Plus,
+  Tag,
+  ArrowRight,
+  X,
+  MagnifyingGlass,
+  Sliders,
+} from "phosphor-react-native";
 
 import { ProductCard } from "@components/ProductCard";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { AppNavigatorRoutesProps } from "@routes/app.routes";
 
-const LINKIMAGE =
-  "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1999&q=80";
+import BottomSheet from "@gorhom/bottom-sheet";
+import { TouchableOpacity } from "react-native";
+import { PaymentOptions } from "@components/PaymentOptions";
+import { Input } from "@components/Input";
 
 const AVATAR_SIZE = 45;
+const GRAY_400 = "#9F9BA1";
+
 export function HomeScreen() {
   const navigation = useNavigation<AppNavigatorRoutesProps>();
-
   const handleUserToProductDetail = () => {
     return navigation.navigate("productDetails");
   };
+
+  const bottomSheetRef = useRef<BottomSheet>(null);
+  const snapPoints = useMemo(() => [1, "68%"], []);
 
   return (
     <YStack f={1} bg="$gray_600" px="$4">
@@ -119,7 +133,32 @@ export function HomeScreen() {
           Compre produtos variados
         </Text>
 
-        <SearchInput />
+        <XStack
+          h={45}
+          ai="center"
+          jc="space-between"
+          space="$2"
+          borderRadius={6}
+          bg="$white"
+          pr="$4"
+        >
+          <Input
+            bg="$white"
+            borderWidth={0}
+            placeholder="Buscar Anuńcio"
+            placeholderTextColor={"$gray_600"}
+            w={279}
+          />
+          <XStack alignItems="center" gap="$2">
+            <TouchableOpacity>
+              <MagnifyingGlass size={20} color="#3E3A40" />
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => bottomSheetRef.current?.expand()}>
+              <Sliders size={20} color="#3E3A40" />
+            </TouchableOpacity>
+          </XStack>
+        </XStack>
 
         <ScrollView showsVerticalScrollIndicator={false} my="$2" mah={372}>
           <XStack
@@ -137,6 +176,117 @@ export function HomeScreen() {
           </XStack>
         </ScrollView>
       </YStack>
+
+      <BottomSheet
+        ref={bottomSheetRef}
+        index={0}
+        snapPoints={snapPoints}
+        backgroundStyle={{ backgroundColor: "#EDECEE" }}
+        handleIndicatorStyle={{ backgroundColor: GRAY_400 }}
+      >
+        <YStack f={1} px="$4">
+          <XStack ai={"center"} jc="space-between" pt="$12">
+            <Text
+              fontWeight={"700"}
+              fontFamily={"$body"}
+              fontSize={"$xl"}
+              color="$gray_100"
+            >
+              Filtrar anúncios
+            </Text>
+
+            <ButtonTamagui
+              icon={<X color={GRAY_400} size={24} />}
+              transparent
+            />
+          </XStack>
+
+          <Text
+            fontFamily={"$body"}
+            fontWeight={"700"}
+            color="$gray_200"
+            mt="$4"
+          >
+            Condição
+          </Text>
+          <XStack mt={"$4"} space="$2">
+            <TouchableOpacity>
+              <Text
+                fontFamily={"$body"}
+                fontSize="$xs"
+                borderRadius={50}
+                backgroundColor={"$gray_500"}
+                fontWeight={"700"}
+                color="$gray_300"
+                pt={6}
+                pb={6}
+                pl={12}
+                pr={12}
+              >
+                NOVO
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <Text
+                fontFamily={"$body"}
+                fontSize="$xs"
+                borderRadius={50}
+                backgroundColor={"$gray_500"}
+                fontWeight={"700"}
+                color="$gray_300"
+                pt={6}
+                pb={6}
+                pl={12}
+                pr={12}
+              >
+                USADO
+              </Text>
+            </TouchableOpacity>
+          </XStack>
+
+          <Text
+            fontFamily={"$body"}
+            fontWeight={"bold"}
+            color="$gray_200"
+            mt="$5"
+          >
+            Aceita troca?
+          </Text>
+
+          <Switch backgroundColor={"$gray_500"} size="$10" mt="$3">
+            <Switch.Thumb animation="bouncy" />
+          </Switch>
+
+          <Stack>
+            <Text
+              fontFamily={"$body"}
+              fontWeight={"bold"}
+              color="$gray_200"
+              mt="$5"
+            >
+              Meios de pagamentos aceitos
+            </Text>
+
+            <PaymentOptions />
+          </Stack>
+
+          <XStack mt={"$10"} jc="space-between">
+            <Button
+              maw={170}
+              title="Resetar filtros"
+              color="$gray_200"
+              bg="$gray_500"
+            />
+            <Button
+              maw={170}
+              title="Aplicar filtros"
+              color="$white"
+              bg="$gray_100"
+            />
+          </XStack>
+        </YStack>
+      </BottomSheet>
     </YStack>
   );
 }

@@ -3,12 +3,16 @@ import { UserAvatar } from "@components/UserAvatar";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { XStack, YStack, Text, Image } from "tamagui";
 
-export function ProductCard({ ...rest }: TouchableOpacityProps) {
+type ProductCardProps = TouchableOpacityProps & {
+  havePhoto?: boolean;
+};
+
+export function ProductCard({ havePhoto = true, ...rest }: ProductCardProps) {
   return (
     <TouchableOpacity {...rest}>
-      <YStack mb="$3">
+      <YStack mb="$3" mt="$2">
         <XStack
-          jc="space-between"
+          jc={havePhoto ? "space-between" : "flex-end"}
           ai="center"
           p="$1"
           position="absolute"
@@ -16,12 +20,16 @@ export function ProductCard({ ...rest }: TouchableOpacityProps) {
           maw={153.5}
           mah={143}
         >
-          <UserAvatar borderColor={"white"} borderWidth={1} />
+          {havePhoto ? (
+            <UserAvatar borderColor={"white"} borderWidth={1} />
+          ) : (
+            <></>
+          )}
 
           <Tag label="usado" />
         </XStack>
 
-        <YStack zIndex={-1} space="$1">
+        <YStack zIndex={-1}>
           <Image
             source={{
               width: 153,
@@ -31,7 +39,7 @@ export function ProductCard({ ...rest }: TouchableOpacityProps) {
             borderRadius={6}
           />
 
-          <Text color="$gray_200" fontFamily={"$body"} fontSize="$sm">
+          <Text color="$gray_200" fontFamily={"$body"} fontSize="$sm" pt="$1">
             Relogio maneiro
           </Text>
           <Text color="$gray_100" fontWeight={"700"} fontSize="$md">
